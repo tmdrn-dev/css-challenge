@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header_content">
+          <h1 class="header_title">
+            Learn to code by <span>watching others</span>
+          </h1>
+          <p class="header_body">
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <div class="advertise">
+          <a href="https://www.frontendmentor.io/"
+            ><b>Try it free 7 days</b> then $20/mo. thereafter</a
+          >
+        </div>
+        <div class="main_content">
+          <form class="signup">
+            <div class="signup_container">
+              <div class="signup_input">
+                <label for="inputFirstName">firstName</label>
+                <input
+                  type="text"
+                  name="firstName"
+                  id="inputFirstName"
+                  placeholder="First Name"
+                  required
+                />
+                <i class="input_icon_error"></i>
+                <div class="input_error_message">
+                  First Name cannot be empty
+                </div>
+              </div>
+              <div class="signup_input">
+                <label for="inputLastName">lastName</label>
+                <input
+                  type="text"
+                  name="lastName"
+                  id="inputLastName"
+                  placeholder="Last Name"
+                  required
+                />
+                <i class="input_icon_error"></i>
+                <div class="input_error_message">Last Name cannot be empty</div>
+              </div>
+              <div class="signup_input">
+                <label for="inputEmail">email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="inputEmail"
+                  placeholder="Email Address"
+                  pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
+                  required
+                />
+                <i class="input_icon_error"></i>
+                <div class="input_error_message">
+                  Looks like this is not an email
+                </div>
+              </div>
+              <div class="signup_input">
+                <label for="inputPassword">password</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="inputPassword"
+                  placeholder="Password"
+                  required
+                />
+                <i class="input_icon_error"></i>
+                <div class="input_error_message">Password cannot be empty</div>
+              </div>
+              <button class="signup_input form_submit">
+                Claim your free trial
+              </button>
+            </div>
+          </form>
+          <div class="terms">
+            By clicking the button, you are agreeing to our
+            <strong>Terms and Services</strong>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/seungku-dev">Seungku Choi</a>.
+      </p>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>

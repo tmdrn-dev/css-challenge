@@ -1,0 +1,43 @@
+.illustration {
+  width: 49%;
+  height: 100%;
+  display: inline-block;
+  background-color: white;
+  background-image: url("../images/bg-pattern-desktop.svg");
+  background-size: 800px;
+  background-repeat: no-repeat;
+  background-position: -500px -250px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+
+.illustration img:first-child {
+  width: 375px;
+  position: absolute;
+  top: 15%;
+  left: -80px;
+  z-index: 2;
+}
+
+@media screen and (max-width: 950px) {
+  .illustration {
+    width: 100%;
+    height: 120px;
+    background-image: url("../images/bg-pattern-mobile.svg");
+    background-size: 240px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    overflow: hidden;
+    position: static;
+    border-radius: 10px;
+  }
+
+  .illustration img:first-child {
+    content: url("../images/illustration-woman-online-mobile.svg");
+    width: 266px;
+    top: -110px;
+    left: 5px;
+    display: inline-block;
+  }
+}

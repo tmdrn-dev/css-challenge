@@ -1,0 +1,284 @@
+:root {
+  --color-red: hsl(0, 100%, 74%);
+  --color-green: hsl(154, 59%, 51%);
+  --color-blue: hsl(248, 32%, 49%);
+  --color-dark-blue: hsl(249, 10%, 26%);
+  --color-grayish-blue: hsl(246, 25%, 77%);
+  --font-size-body: 16px;
+  --font-family-primary: "Poppins", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html,
+body,
+div,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  border: 1px solid var(--color-grayish-blue);
+  padding: 0 1.5rem;
+  font-family: var(--font-family-primary);
+  font-weight: 600;
+}
+
+input:focus {
+  outline: none;
+}
+
+input.focus {
+  border: 1px solid var(--color-blue);
+}
+
+button,
+button:focus {
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+  box-sizing: content-box;
+}
+
+span {
+  display: block;
+}
+
+a,
+a:visited {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+body {
+  color: #fff;
+  font-family: var(--font-family-primary);
+  font-weight: 400;
+  content: "";
+  position: absolute;
+  background-color: var(--color-red);
+  background-image: url("images/bg-intro-desktop.png");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  min-height: 100vh;
+}
+
+label {
+  display: none;
+}
+
+.header {
+  min-width: 270px;
+  max-width: 450px;
+  grid-area: header;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 450px;
+  grid-area: main;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aside {
+  width: 450px;
+  grid-area: aside;
+  align-self: end;
+  margin: 0 auto;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    ". header main ."
+    ". footer footer .";
+}
+
+.container {
+  width: 100%;
+}
+
+.header_content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header_body {
+  font-size: 14px;
+}
+
+.main_content {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.signup_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup_input {
+  width: 380px;
+  height: 2.5rem;
+  position: relative;
+  margin: 0.5rem auto;
+}
+
+.signup_input.error {
+  margin-bottom: 2rem;
+}
+
+.signup_input.error input {
+  color: var(--color-red);
+}
+
+.input_icon_error {
+  content: "";
+  background-image: url("images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  display: none;
+}
+
+.input_error_message {
+  color: var(--color-red);
+  text-align: right;
+  display: none;
+  line-height: 1.5rem;
+}
+
+.error input {
+  border: 1px solid var(--color-red);
+}
+
+.error .input_error_message {
+  display: block;
+  font-size: 12px;
+}
+
+.error .input_icon_error {
+  display: block;
+}
+
+.form_submit {
+  font-family: inherit;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: var(--color-green);
+  border: 1px solid var(--color-green);
+  border-radius: 0.25rem;
+}
+
+.terms {
+  color: var(--color-grayish-blue);
+  font-size: 10px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.terms strong {
+  color: var(--color-red);
+}
+
+.advertise {
+  box-sizing: border-box;
+  background-color: var(--color-blue);
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  height: 2.5rem;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto 1fr 2fr auto;
+    grid-template-areas:
+      ". . ."
+      ". header ."
+      ". main ."
+      ". footer .";
+  }
+
+  .header {
+    min-width: 270px;
+    max-width: 350px;
+  }
+
+  .header_content {
+    text-align: center;
+  }
+
+  .header_body {
+    font-size: 1rem;
+  }
+
+  .main {
+    width: 350px;
+  }
+
+  .signup_input {
+    width: 300px;
+    height: 4rem;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+  }
+
+  .input_icon_error {
+    top: 25px;
+  }
+
+  .advertise {
+    height: 6rem;
+    padding: 25px 30px;
+    margin-bottom: 1.5rem;
+  }
+
+  .advertise b {
+    display: block;
+  }
+
+  .terms {
+    padding: 0 2rem;
+    font-size: 12px;
+  }
+}
